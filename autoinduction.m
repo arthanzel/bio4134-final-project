@@ -1,4 +1,3 @@
-function xp = autoinduction(t, x, a0, ai, kd, d, n)
-    hill = (x / (kd + x))^n;
-    xp = a0 + ai * hill - d * x;
+function xp = autoinduction(~, x, a0, ai, kd, d, n)
+    xp = a0 + ai * bound(x, kd, n) - d * x;
 end
